@@ -1,0 +1,5 @@
+.idea
+*.js
+
+schedule/node_modules/
+api/node_modules/

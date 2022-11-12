@@ -1,0 +1,27 @@
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 102938
+      MYSQL_DATABASE: test
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+  api:
+    restart: always
+    volumes:
+      - ./api:/api
+      - ./api/node_modules:/node_modules
+    build: ./api
+    command: sh -c "npm install && npx tsc && node ./src/index.js"
+    ports:
+      - 3000:3000
+  schedule:
+    volumes:
+      - ./schedule:/schedule
+      - ./schedule/node_modules:/node_modules
+    build: ./schedule
+    command: sh -c "npm install && npx tsc && node ./src/index.js"
+    ports:
+      - 10101:10101

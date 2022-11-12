@@ -1,0 +1,9 @@
+export const KEY = "BA2B247CCA49A31D83783722D18CE49E&steamids"
+export const BASE_URL = "http://localhost:3000"
+export const PORT = 3000
+export const DB_HOST = "mysql"
+export const DB_USER = "root"
+export const DATABASE = "test"
+export const DB_PASSWORD = "102938"
+export const SECRET_JWT = "ndkjfnvkjdkjnrjktergeg"
+export const NO_AUTH_ROUTES = ["/api/v1/auth", "/api/v1/auth-return"]
