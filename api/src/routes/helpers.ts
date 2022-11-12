@@ -3,9 +3,9 @@ import {Controller, ControllerData} from "../controllers/controllers";
 import {Express} from "express";
 import {routes} from "./auth";
 import Service from "../services/Services";
-import RepositoryImpl from "../services/RepositoryImpl";
+import RepositoryImpl from "../providers/dbProvider/RepositoryImpl";
 import {jwtMiddleware} from "./jwtMiddleware";
-import MicroServiceClientImpl from "../services/MicroServiceClientImpl";
+import MicroServiceClientImpl from "../providers/microserviceProvider/MicroServiceClientImpl";
 
 export function formControllerData(req: Request, res: Response): ControllerData {
     return {

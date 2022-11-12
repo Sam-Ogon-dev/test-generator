@@ -1,6 +1,6 @@
-import Repository from "./Repository";
-import {DbConnect} from "../providers/dbProvider/dbConnect";
-import User from "../domain/User";
+import Repository from "../../services/Repository";
+import {DbConnect} from "./dbConnect";
+import User from "../../domain/User";
 
 export default class RepositoryImpl implements Repository{
     async saveRefreshToken(refreshToken: string): Promise<boolean> {

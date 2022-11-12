@@ -2,7 +2,6 @@ import {getSteamUser} from "../providers/apiProvider/apiProvider";
 import {BASE_URL} from "../config";
 import Service from "../services/Services";
 import {UserDto} from "./dto/UserDto";
-import seneca from "seneca";
 
 export interface ControllerData {
     getBody<T>(): T
